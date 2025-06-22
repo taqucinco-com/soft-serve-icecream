@@ -13,6 +13,8 @@ https://firebase.google.com/docs/flutter/setup?hl=ja&_gl=1*1dnjob9*_up*MQ..*_ga*
 
 // https://firebase.google.com/docs/auth/flutter/errors?hl=ja&_gl=1*1lpanqz*_up*MQ..*_ga*MTQyMzY1MTIwNi4xNzEyNjU3NjMw*_ga_CW55HF8NVT*MTcxMjY1NzYyOS4xLjAuMTcxMjY1NzYyOS4wLjAuMA..
 
+https://firebase.google.com/docs/flutter/setup?hl=ja&platform=ios
+
 https://pub.dev/packages/firebase_auth
 
 ```

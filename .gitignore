@@ -25,6 +25,13 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+android/.idea/**
 
 # FVM Version Cache
 .fvm/
+
+# Firebase
+lib/firebase_options.dart
+firebase.json
+ios/Runner/GoogleService-Info.plist
+android/app/google-services.json
