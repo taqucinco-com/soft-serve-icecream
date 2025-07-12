@@ -11,6 +11,16 @@
       ]
     },
     {
+      "name": "Flutter Release",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": [
+        "--dart-define-from-file=env/prod.json",
+        "--release"
+      ]
+    },
+    {
       "name": "Flutter Web",
       "request": "launch",
       "type": "dart",

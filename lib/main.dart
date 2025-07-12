@@ -21,7 +21,16 @@ Future<void> main() async {
   );
   analytics = FirebaseAnalytics.instance;
 
-  final _ = await FirebaseMessaging.instance.requestPermission(provisional: true);
+  final settings = await FirebaseMessaging.instance.requestPermission(
+    alert: true,
+    announcement: false,
+    badge: true,
+    carPlay: false,
+    criticalAlert: false,
+    provisional: false,
+    sound: true,
+  );
+  print('User granted permission: ${settings.authorizationStatus}');
   fcmToken = await FirebaseMessaging.instance.getToken();
   print('FCM Token: $fcmToken');
   FirebaseMessaging.instance.onTokenRefresh.listen((token) {
@@ -75,6 +84,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String _token = fcmToken ?? '';
 
   void _incrementCounter() async {
     setState(() {
@@ -101,6 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text('token: $_token'),
           ],
         ),
       ),
