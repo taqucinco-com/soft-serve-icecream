@@ -1,0 +1,19 @@
+name: google cloud
+
+on:
+  push:
+
+jobs:
+  gsls:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: google-github-actions/auth@v0
+        with:
+          workload_identity_provider: "projects/497978994283/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions-provider"
+          service_account: "github-actions@softserve-icecream.iam.gserviceaccount.com"
+
+      # プライベートな GCS バケットを読み取ってみる
+      - run: gcloud storage ls gs://taqucinco
